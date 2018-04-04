@@ -38,7 +38,7 @@ module.exports = {
                 }),
             },
             {
-                text: /\.less$/,
+                test: /\.less$/,
                 use: extractTextPlugin.extract({
                     use: [
                         {
