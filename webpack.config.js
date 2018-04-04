@@ -33,7 +33,7 @@ module.exports = {
           {
             loader: 'css-loader',
 
-            options: {                 // css-module
+            options: {                
               importLoaders: 1,
             //   modules:true,
             //   localIdentName: '[name]_[local]-[hash:base64:5]',
