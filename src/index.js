@@ -8,8 +8,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
-import registerServiceWorker from './registerServiceWorker'
-import { AppContainer } from 'react-hot-loader'
+import registerServiceWorker from './registerServiceWorker'   
+import { AppContainer } from 'react-hot-loader'    // 部分更新
 import store from './appStore.js'
 import RoutePage from './routePage'
 
