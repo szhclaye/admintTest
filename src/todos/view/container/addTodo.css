@@ -1,0 +1,93 @@
+$width: 750px;
+$label-font-color: #3f4f5b;
+$label-focus-font-color: rgb(82, 97, 108);
+$border-bottom-color: #d5d5d5;
+$focus-border-color:#008CBA;
+$transform-top: 10px;
+$transform-time: 0.3s;
+$scale: 0.8;
+
+.input_container {
+    width: $width;
+    position: relative;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin: 20px auto;
+}
+
+.form_group{
+    flex:1;
+    margin-left: 20px;
+    margin-top: 15px;
+    display:flex;
+    flex-flow: column-reverse;
+}
+.submit_button{
+    width:90px;
+    height: 50px;
+    background-color: #fff;
+    border:2px solid #006b8e;
+    border-radius: 5px;
+    margin: 0 20px 15px 20px;
+    flex:none;
+}
+
+.form_group input {
+    order: 10;
+    z-index: 10;
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 50px;
+    font-size: 20px; /*no*/
+    border-bottom: 1px solid $border-bottom-color;
+    text-indent: 10px;
+}
+
+
+
+.form_group input::-webkit-input-placeholder {
+    opacity: 0;
+}
+
+.form_group input,
+.form_group label {
+    transition: all $transform-time ease-out;
+}
+
+.form_group label {
+    order: 100;
+    z-index:100;
+    font-size: 16px; /*no*/
+    margin-left: 30px;
+    color: $label-font-color;
+    transform-origin: left bottom;
+    transform: translate(0px,40px);  /*tansform 辅助定位*/
+}
+
+.form_group .bottom_line {
+    order: 1;
+    width: 0;
+    height: 2px;
+    margin-bottom: 15px;
+    background: #006b8e;
+    transition: all $transform-time;
+}
+
+.form_group input:focus {
+    border-bottom-color: #fff;
+}
+
+.form_group input:focus ~ div,
+.form_group input:not(:placeholder-shown) ~ div {
+    width: 100%;
+}
+
+.form_group input:focus + label,
+.input_container input:not(:placeholder-shown) + label {
+    display: block;
+    color: $label-focus-font-color;
+    transform: translate(45px,0px) scale($scale);
+}
