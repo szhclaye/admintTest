@@ -1,19 +1,17 @@
 import { createStore } from 'redux'
 
-export const addTodo = (text)=>({
-    type:'ADD_TODO',
+export const addTodo = (text )=>({
+    type:'ADD',
     text
 })
 
-
-export const todoReducer = (state=[],action)=>{
+export const todos = (state ='my',action)=>{
     switch (action.type) {
-        case 'ADD_TODO':
+        case 'ADD':
             return state
         default:
             return state;
     }
 }
 
-const store = createStore(todoReducer)
-export default store
+export default createStore(todos);
