@@ -11,7 +11,7 @@
         ],
         [
             "import",
-            { "libraryName": "antd", "libraryDirectory": "es", "style": "css" }
+            { "libraryName": "antd", "libraryDirectory": "es", "style": "true" }   
         ],
         "react-hot-loader/babel"
     ],
@@ -21,3 +21,4 @@
         }
     }
 }
+

@@ -1,11 +1,11 @@
 import React from 'react'
 import { Layout,notification,Icon } from 'antd'
-import HeaderCustom from './component/HeaderCustom.js'
-import SiderCustom from './component/SiderCustom.js'
-import Content from './component/Content.js'
-import Footer from './component/Footer.js'
 
-
+//.babelrc  style:css则不能加载antd的less样式，会报错
+import HeaderCustom from './components/HeaderCustom.js'
+import SiderCustom from './components/SiderCustom.js'
+import Content from './components/Content.js'
+import Footer from './components/Footer.js'
 
 
 

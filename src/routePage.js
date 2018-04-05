@@ -21,7 +21,6 @@ const routePage = () => (
                 path="/"
                 render={() => <Redirect to="/Page" push />}
             />
-            <Route path="/app" component={App} />
             <Route path="/Page" component={App} />
         </Switch>
     </ConnectedRouter>

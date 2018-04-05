@@ -22,7 +22,7 @@ module.exports = {
             autoprefixer:false,
             'postcss-zindex':false
         },
-        'precss': {},
+        // 'precss': {},
         // 'postcss-px2rem': {
         //     remUnit: 75,
         //     threeVersion: true,
