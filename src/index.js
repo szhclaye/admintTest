@@ -45,7 +45,11 @@ if (module.hot) {
             orgError.apply(console, args)
         }
     }
+<<<<<<< HEAD
     module.hot.accept('./RoutePage', () => { // 关键的代码
+=======
+    module.hot.accept('./Page', () => { // 关键的代码
+>>>>>>> 6e580bf43e365e44ec9bf7ad4a6a364ddd54e427
         render(RoutePage)
     })
 }
