@@ -4,19 +4,19 @@
  * @output:   to  index.js(entry)
  * @params: 
  */
-import React from "react";
-import { Provider } from "react-redux";
-import store from "../store";
-import route from "../route";
-import { ConnectedRouter } from "react-router-redux";
-import createBrowserHistory from "history/createBrowserHistory";
+import React from 'react';
+import { Provider } from 'react-redux';
+import store from '../store';
+import AppRoute from '../route';
+import { ConnectedRouter } from 'react-router-redux';
+import createBrowserHistory from 'history/createBrowserHistory';
 
 const history = createBrowserHistory();
 
 export default () => (
     <Provider store={store}>
-        <div>
-            <ConnectedRouter history={history} children={route} />
-        </div>
+        <ConnectedRouter history={history}>
+            <AppRoute />
+        </ConnectedRouter>
     </Provider>
 );

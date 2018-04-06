@@ -15,10 +15,10 @@ const comReducer = combineReducers({
 });
 
 const history = createBrowserHistory();
-const middleware = [routerMiddleware(history)];
+const middlewares = [routerMiddleware(history)];
 
 if (process.env.NODE_ENV !== 'production') {
     middlewares.push(require('redux-immutable-state-invariant')());
 }
 
-export default createStore(comReducer, {}, applyMiddleware(middlewares));
+export default createStore(comReducer,{},applyMiddleware(...middlewares));

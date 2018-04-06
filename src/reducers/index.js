@@ -3,11 +3,11 @@ export const addTodo = text => ({
     text
 });
 
-export default (todos = (state = 't', action) => {
+export default (state = 't', action) => {
     switch (action.type) {
     case 'ADD':
         return state;
     default:
         return state;
     }
-});
+};
