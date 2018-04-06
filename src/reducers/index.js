@@ -1,17 +1,13 @@
-import { createStore } from "redux";
-
 export const addTodo = text => ({
     type: "ADD",
     text
 });
 
-export const todos = (state = "my", action) => {
+export default (todos = (state = "t", action) => {
     switch (action.type) {
     case "ADD":
         return state;
     default:
         return state;
     }
-};
-
-export default createStore(todos);
+});

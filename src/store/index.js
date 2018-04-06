@@ -9,6 +9,7 @@ import createBrowserHistory from "history/createBrowserHistory";
 import { routerReducer, routerMiddleware } from "react-router-redux";
 import reducers from "../reducers";
 
+
 const comReducer = combineReducers({
     ...reducers,
     router: routerReducer // route
