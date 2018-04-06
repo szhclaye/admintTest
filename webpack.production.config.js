@@ -12,7 +12,7 @@ module.exports = {
     resolve: {
         extensions: [".js", ".jsx", ".json"],
         alias: {
-            "@": path.resolve(__dirname + "/src")
+            "@": path.resolve(__dirname + "/src") //别名
         }
     },
     devtool: "null",
