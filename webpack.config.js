@@ -21,7 +21,7 @@ module.exports = {
     resolve: {
         extensions: [".js", ".jsx", ".json"],
         alias: {
-            "@": resolve("/src")
+            "@": path.resolve(__dirname + "/src")
         }
     },
     devtool: "eval-source-map",

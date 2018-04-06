@@ -4,11 +4,10 @@
  * @output:  store
  * @params: 
  */
-import { createStore, applyMiddleware, combineReducers } from "redux";
-import createBrowserHistory from "history/createBrowserHistory";
-import { routerReducer, routerMiddleware } from "react-router-redux";
-import reducers from "../reducers";
-
+import { createStore, applyMiddleware, combineReducers } from 'redux';
+import createBrowserHistory from 'history/createBrowserHistory';
+import { routerReducer, routerMiddleware } from 'react-router-redux';
+import reducers from '../reducers';
 
 const comReducer = combineReducers({
     ...reducers,
@@ -18,9 +17,8 @@ const comReducer = combineReducers({
 const history = createBrowserHistory();
 const middleware = [routerMiddleware(history)];
 
-const storeEnhancers = compose(
-    applyMiddleware(...middlewares),
-    win && win.devToolsExtension ? win.devToolsExtension() : f => f // Devtools
-);
+if (process.env.NODE_ENV !== 'production') {
+    middlewares.push(require('redux-immutable-state-invariant')());
+}
 
-export default createStore(comReducer, {}, storeEnhancers);
+export default createStore(comReducer, {}, applyMiddleware(middlewares));

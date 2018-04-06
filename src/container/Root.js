@@ -1,13 +1,22 @@
 /*
- * @author: shazhenghu,CreateTime:2018-04-06 19:53:04,LastModifiedTime:2018-04-06 19:53:04 
- * @input:   Provider -->route (route.js)
-                      |-->store (store.js)
- * @output:  
+ * @author: shazhenghu,CreateTime:2018-04-06 20:08:36,LastModifiedTime:2018-04-06 20:08:3
+ *  * @input:    from  store  route
+ * @output:   to  index.js(entry)
  * @params: 
  */
+import React from "react";
+import { Provider } from "react-redux";
+import store from "../store";
+import route from "../route";
+import { ConnectedRouter } from "react-router-redux";
+import createBrowserHistory from "history/createBrowserHistory";
 
-if (process.env.NODE_ENV === "production") {
-    module.exports = require("./Root.prod.js");
-} else {
-    module.exports = require("./Root.dev.js");
-}
+const history = createBrowserHistory();
+
+export default () => (
+    <Provider store={store}>
+        <div>
+            <ConnectedRouter history={history} children={route} />
+        </div>
+    </Provider>
+);

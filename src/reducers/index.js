@@ -1,11 +1,11 @@
 export const addTodo = text => ({
-    type: "ADD",
+    type: 'ADD',
     text
 });
 
-export default (todos = (state = "t", action) => {
+export default (todos = (state = 't', action) => {
     switch (action.type) {
-    case "ADD":
+    case 'ADD':
         return state;
     default:
         return state;
