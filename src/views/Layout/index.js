@@ -1,5 +1,17 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { Layout,Affix,Row,Col } from "antd";
 
-const Layout = () => <div>Layout</div>;
+import Sidebar from "@/components/Sidebar";
 
-export default Layout;
+class App extends Component {
+    state = {  }
+    render() {
+        return (
+            <Layout className="ant-ant-layout-has-sider">
+                <Sidebar />
+            </Layout>
+        );
+    }
+}
+
+export default App;
