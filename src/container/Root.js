@@ -8,9 +8,8 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'react-router-redux';
 
-import { history,store } from '@/store';
+import { history, store } from '@/store';
 import RouteConfig from '@/routeConfig';
-
 
 export default () => (
     <Provider store={store}>
