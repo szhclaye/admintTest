@@ -6,17 +6,16 @@
  */
 import React from 'react';
 import { Provider } from 'react-redux';
-import store from '../store';
-import AppRoute from '../route';
 import { ConnectedRouter } from 'react-router-redux';
-import createBrowserHistory from 'history/createBrowserHistory';
 
-const history = createBrowserHistory();
+import { history,store } from '@/store';
+import RouteConfig from '@/routeConfig';
+
 
 export default () => (
     <Provider store={store}>
         <ConnectedRouter history={history}>
-            <AppRoute />
+            <RouteConfig />
         </ConnectedRouter>
     </Provider>
 );
